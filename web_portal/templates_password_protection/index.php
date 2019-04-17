@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>The Human Development Cell Atlas at Newcastle University</title>
-  <meta name="description" content="Fetal liver gene expression from the Fetal Cell Atlas obtained in the Haniffa Lab at Newcastle University">
+  <title>Gene expression web portal</title>
+  <meta name="description" content="Gene expression web portal for single cell RNA sequencing data made for the Human Cell Atlas at Newcastle University">
   <meta name="author" content="Dorin-Mirel Popescu">
   <link rel="stylesheet" type="text/css" href="../theme_datasets.css">
 </head>
