@@ -4,7 +4,7 @@
 #$ -N interactive_heatmap_dotplot
 #$ -V
 #$ -l h_rt=47:59:59
-#$ -l h_vmem=200G
+#$ -l h_vmem=100G
 
 if [ "$#" -ne 1 ]; then
     echo "Illegal number of parameters"

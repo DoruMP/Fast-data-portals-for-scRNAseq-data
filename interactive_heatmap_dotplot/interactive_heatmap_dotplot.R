@@ -1,6 +1,7 @@
 library(Seurat)
 library(methods)
-source("../../tools/bunddle_utils.R")
+
+python.addr = 'python3.6'
 
 args = commandArgs(trailingOnly=T)
 options_file = args[1]

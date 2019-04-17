@@ -35,6 +35,8 @@ for(n in 1:length(expected_arguments)){
   }
 }
 
+python.addr = 'python3.6'
+
 # create required folders for output and work material
 output_folder = gsub(pattern="^\\d+_", replacement="", x=basename(getwd()))
 output_folder = paste(output_folder, seurat.addr, sep = "_")
@@ -50,8 +52,6 @@ dir.create(output_folder)
 
 output_folder_material = file.path(output_folder, "material")
 dir.create(output_folder_material)
-
-source("../../tools/bunddle_utils.R")
 
 library(Seurat)
 library(ggplot2)

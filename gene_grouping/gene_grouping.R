@@ -7,6 +7,8 @@ seurat.addr.arg = args[1]
 no_clusters.arg = args[2]
 "
 
+python.addr = "python3.6"
+
 expected_arguments = unlist(strsplit(arguments.list, "\n"))
 expected_arguments = expected_arguments[!(expected_arguments == "")]
 
@@ -42,8 +44,6 @@ c.time = substr(x=c.time, start=3, stop=nchar(c.time))
 output_folder = paste(output_folder, c.time, sep = "_")
 output_folder = file.path("../../output", output_folder)
 dir.create(output_folder)
-
-source("../../tools/bunddle_utils.R")
 
 library(Seurat)
 library(RColorBrewer)
