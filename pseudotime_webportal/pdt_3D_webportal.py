@@ -25,7 +25,7 @@ template = """
 <head>
   <meta charset='utf-8'>
 
-  <title>3D viewer</title>
+  <title>Trajectory viewer</title>
   <meta name='description' content='Trajectory analysis of insert_lineage.'>
   <meta name='author' content='Dorin-Mirel Popescu'>
   <style type = 'text/css'>
