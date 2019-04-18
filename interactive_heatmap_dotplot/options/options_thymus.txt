@@ -2,4 +2,4 @@
 Annotation
 fetal_thymus_interactive_gene_expression_heatmap
 fetal_thymus_interactive_gene_expression_heatmap.html
-scRNAseq data of fetal thymus - a present to Jongeun from Dorin 
+scRNAseq data of thymus
