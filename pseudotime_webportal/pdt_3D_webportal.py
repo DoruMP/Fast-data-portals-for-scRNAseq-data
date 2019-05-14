@@ -12,7 +12,7 @@ output_folder = args[1]
 load_from = args[2]
 lineage_name = args[3]
 
-insert_lineage = insert_lineage.replace("@@", " ")
+insert_lineage = lineage_name.replace("@@", " ")
 
 from os.path import join
 save_to = join(output_folder, "index.php")
@@ -1059,6 +1059,7 @@ request.onreadystatechange = function(){
 		request.open("GET", "fetch_gene_expression.php" + queryString, true)
 		request.send(null)
   </script>
+  <div style="float: clear;""><hr><span style="font-size:0.8em;">This data portal was created using the pseudotime_webportal tool (<a href="https://github.com/DoruMP/Fast-data-portals-for-scRNAseq-data">github link</a>) developed by Dorin-Mirel Popescu</span><hr></div>
 </body>
 </html>
 """

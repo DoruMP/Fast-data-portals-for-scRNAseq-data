@@ -7,7 +7,6 @@ Created on Thu Dec 20 12:00:47 2018
 """
 
 # gene expression should be at data.X
-# gene symbols should be at data.var.GeneName
 # DRs should be at data.obsm
 # categoeis should be columns at data.obs
 
@@ -29,7 +28,7 @@ gene_expression = data.X
 mmwrite(expression_data_filename, gene_expression)
 
 # save gene names
-gene_names = "\n".join(data.var.GeneName.tolist())
+gene_names = "\n".join(data.var_names.tolist())
 with open(join(output_folder, 'gene_names.txt'), "w") as gene_names_fobj:
     gene_names_fobj.write(gene_names)
     

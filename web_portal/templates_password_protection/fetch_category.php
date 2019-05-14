@@ -1,6 +1,6 @@
 <?php 
 	$mot_de_pass = $_GET['mot_de_pass'];
-	$password = "PEX4NH4ZPYxpnGZPfeXc";
+	$password = "b3mZ5GVYeRZEvk8ctsEk";
 	if ($mot_de_pass != $password){
 		exit('Password not correct');
 	}

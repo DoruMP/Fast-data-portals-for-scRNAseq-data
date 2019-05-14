@@ -29,7 +29,7 @@ expression_data_fname = join(output_dir, 'expression.csv')
 
 # open the required csv file
 import pandas as pd
-expression_data = pd.read_csv(expression_data_fname, index_col = 0, header = 0, encoding='latin-1')
+expression_data = pd.read_csv(expression_data_fname, index_col = 0, header = 0)
 expression_data = expression_data.apply(truncateFloat)
 
 # populate data

@@ -5,7 +5,28 @@
   <title>Gene expression web portal</title>
   <meta name="description" content="Gene expression web portal for single cell RNA sequencing data made for the Human Cell Atlas at Newcastle University">
   <meta name="author" content="Dorin-Mirel Popescu">
-  <link rel="stylesheet" type="text/css" href="../theme_datasets.css">
+    <style>
+   #div_left {
+    float: left;
+}
+
+#canvasdiv {
+	overflow-x: scroll;
+	overflow-y: scroll;
+	max-height: 90vh;
+}
+#typesControlPanel {
+ height: 25em;
+ overflow-y: auto;
+}
+
+#cursorText{
+    position:absolute;
+    background-color: black;
+    color : white;
+}
+
+  </style>
 </head>
 
 <body>
@@ -691,10 +712,38 @@
 	
 	canvas_init = true;
 	
+	var curTxt=document.createElement('div');
+    curTxt.id="cursorText";
+    document.body.appendChild(curTxt);
+	canvas.addEventListener('mousemove', function(event){
+	  var canvasRect = canvas.getBoundingClientRect();
+	  var selectedIndex = false;
+  	  Xc = 2*(event.clientX - canvasRect.x) / canvas.width - 1;
+  	  Yc = -2*(event.clientY - canvasRect.y) / canvas.height + 1;
+  	  for(var k=0; k<dr_coordinates.length/2;k++){
+	     dd = Math.abs(Xc - dr_coordinates[2*k]) + Math.abs(Yc - dr_coordinates[2*k + 1])
+	     if (dd < .003){
+	       selectedIndex = k
+	       break;
+	     }
+	   }
+	   var selectedCellType = ""
+	   for (var xy_cell_type in type_indices){
+	      if (type_indices[xy_cell_type].includes(selectedIndex)){
+	         selectedCellType = xy_cell_type
+	         break
+	      }
+	   }
+	   
+	   curTxt.innerHTML = selectedCellType
+	   curTxt.style.left = event.pageX + 5 + "px"
+	   curTxt.style.top  = event.pageY - curTxt.offsetHeight + "px"
+	})
+	
 	// safari does not support datalist
 	// see at https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_datalist
   
   </script>
-  
+  <div style="float: clear;""><hr><span style="font-size:0.8em;">This data portal was created using the web_portal tool (<a href="https://github.com/DoruMP/Fast-data-portals-for-scRNAseq-data">github link</a>) developed by Dorin-Mirel Popescu</span><hr></div>
 </body>
 </html>

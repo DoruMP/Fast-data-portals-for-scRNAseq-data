@@ -4,7 +4,7 @@ This repository contains tools for making web portals and interactive tools used
 
 ## Interactive tools and web portals:
 
-### web_portal
+### web_portal.sh
 * see an example [here](https://developmentcellatlas.ncl.ac.uk/datasets/liver_10x/)
 * the pipeline can be called with _web\_portal.sh_
 * this take as input an option file
