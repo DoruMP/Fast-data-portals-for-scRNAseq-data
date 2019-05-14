@@ -45,6 +45,9 @@ template = """
   	#instructions_div {
   		margin:0; padding:0;
   	}
+  	body {
+  font-family: Avenir, Arial, sans-serif;
+}
   </style>
 </head>
 <body>
