@@ -6,6 +6,9 @@
   <meta name="description" content="Gene expression web portal for single cell RNA sequencing data made for the Human Cell Atlas at Newcastle University">
   <meta name="author" content="Dorin-Mirel Popescu">
   <style>
+body {
+  font-family: Avenir, Arial, sans-serif;
+}
    #div_left {
     float: left;
 }
